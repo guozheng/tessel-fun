@@ -9,10 +9,9 @@ ambient light and sound levels and whenever a
 specified light or sound level trigger is met.
 *********************************************/
 
-var tessel = require('tessel')
-var alarm = require('ambient-attx4')
-
-var ambient = alarm.use(tessel.port['A'])
+const tessel = require('tessel')
+const alarm = require('ambient-attx4')
+const ambient = alarm.use(tessel.port['A'])
 
 ambient.on('ready', function () {
   // Get points of light and sound data.
